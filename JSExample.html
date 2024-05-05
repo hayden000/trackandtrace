@@ -1,0 +1,38 @@
+<!DOCTYPE xhtml>
+<xhtml lang="EN">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Example</title>
+    </head>
+    <body>
+    <button onclick="hello()">Saying Hello</button>
+    <p></p>
+    <button onclick="upCount(count)">Counting</button>
+    <form>
+        <p>What are you afraid of?</p>
+        <label></label>
+        <label for="afraid"></label>
+        <input type="text" name="afraid" id="afraid"/>
+        <input value="no fear" type="button" id="no fear" name="no fear"/>
+    </form>
+    </body>
+    <script>
+        var count;
+        count = 0;
+
+        function hello() {
+            alert("Hello there!");
+        }
+
+        function upCount(value) {
+            value++;
+            alert(value);
+            count = value;
+            return value;
+        }
+
+        document.getElementById('no fear').onclick = function noFear() {
+            alert("There are no " + document.getElementById("afraid").value + " to be found around here!");
+        }
+    </script>
+</xhtml>
